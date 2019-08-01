@@ -1,0 +1,34 @@
+.product-badge {
+  position: absolute;
+  right: 0;
+  top: 5px;
+
+  &__container {
+    position: relative;
+    text-align: right;
+  }
+
+  &__badge-item {
+    margin: 7px auto 0 auto;
+  }
+
+  &__badge {
+    justify-content: center;
+    background: #ffe556;
+    align-items: center;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: $border-radius 0 0 $border-radius;
+    padding: 4px 8px;
+    display: inline-block;
+
+    & > div,
+    & > span {
+      margin: 0 auto;
+    }
+
+    &:first-child {
+      margin: 0 auto;
+    }
+  }
+}

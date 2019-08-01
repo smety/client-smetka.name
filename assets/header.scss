@@ -1,0 +1,26 @@
+/*
+ Header
+ ========
+*/
+
+@import "variable";
+
+.header {
+  padding: 0;
+  margin: 20px 0 20px 0;
+
+  .link {
+    color: $secondary;
+    text-decoration: underline;
+    display: inline-flex;
+    padding: 10px 15px;
+
+    &:hover {
+      color: white;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}

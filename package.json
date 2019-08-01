@@ -1,0 +1,39 @@
+{
+  "name": "smetka.name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "prettier": "prettier --write \"{{components,epics,lib,mutations,pages,reducers,scripts,test,themes,types},__{tests,mocks,generated}__}/**/*.js\"",
+    "kill": "alias kill3000=\"fuser -k -n tcp 3000\"\n"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "bootstrap": "^4.3.1",
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^9.0.1",
+    "next-offline": "^4.0.2",
+    "next-routes": "^1.4.2",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.14.3",
+    "express": "^4.17.1",
+    "next-compose": "0.0.2",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  }
+}

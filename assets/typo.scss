@@ -1,0 +1,36 @@
+/*
+ Typo
+ ========
+*/
+
+@import "variable";
+
+h1, h2 {
+  color: $primary;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 40px 0 20px 0;
+}
+
+p {
+  padding: 0;
+  margin: 10px 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0 0 0 20px;
+
+  li {
+    list-style: square;
+    padding: 6px 0;
+  }
+}

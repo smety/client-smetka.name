@@ -1,0 +1,10 @@
+/** Mixin pro pushnuti SVG ikony **/
+@mixin svg($image, $width, $height, $display, $margin) {
+	background: url("#{$path-svg}#{$image}") no-repeat center center;
+	background-size: contain;
+	display: $display;
+	height: $height;
+	margin: $margin;
+	width: $width;
+	// !important =  SVG musi mit xlink:href="data:image/png;base64
+}

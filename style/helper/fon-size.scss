@@ -1,0 +1,18 @@
+/* stylelint-disable */
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		@for $i from $stop-point-font-start through $stop-point-font-end {
+			.fs#{$infix}-#{$i} {
+				font-size: #{$i}px;
+			}
+		}
+
+		@for $i from $stop-point-font-start through $stop-point-font-end {
+			.lh#{$infix}-#{$i} {
+				line-height: #{$i}px;
+			}
+		}
+	}
+}

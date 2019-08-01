@@ -1,0 +1,22 @@
+.homepage-banner {
+  height: 450px;
+  background: url("#{$path-assets}hp-banner.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.75);
+  }
+
+  &__info {
+    width: 500px;
+    margin-left: calc(50% + 50px);
+    z-index: 1;
+  }
+}
