@@ -20,9 +20,21 @@ h2 {
   margin: 40px 0 20px 0;
 }
 
+a {
+  color: $primary;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
 p {
   padding: 0;
   margin: 10px 0;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 ul {

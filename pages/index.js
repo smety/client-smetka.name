@@ -5,9 +5,9 @@ export default class Home extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>Tomas Smetka - Frontend developer</h1>
+        <h1>Hi, welcome to my personal page</h1>
 
-        <p></p>
+        <p>I work 10 years as frontend developer.</p>
       </Layout>
     );
   }

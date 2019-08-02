@@ -7,6 +7,10 @@ export default class Header extends React.Component {
     return (
       <header className={css.header}>
         <nav>
+          <Link route="index">
+            <a className={css.link}>Home</a>
+          </Link>
+
           <Link route="contact">
             <a className={css.link}>Contact</a>
           </Link>

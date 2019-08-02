@@ -23,3 +23,14 @@
   display: inline-block;
   margin: 5px 0 0 0;
 }
+
+.filterLink {
+  display: inline-flex;
+  padding: 7px 15px;
+  background: lighten($body, 10%);
+  color: white;
+
+  &:first-child {
+    padding-left: 0;
+  }
+}

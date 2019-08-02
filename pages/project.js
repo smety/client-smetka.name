@@ -1,26 +1,43 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import css from './../assets/project.scss';
-import externalProjectSource from '../config/externalProject';
+import external from '../static/mock/external';
 
 export default class Project extends React.Component {
-  static async getInitialProps() {
-    const data = externalProjectSource;
-    return data;
+  constructor(props) {
+    super(props);
+    this.state = {
+      project: external,
+      active: 'external',
+      header: 'Client project',
+    };
   }
 
-  handleChangeProject() {}
+  async handleChangeProject(sourceType = 'external', header = 'Client project') {
+    const res = await fetch(`./static/mock/${sourceType}.json`);
+    const data = await res.json();
+    this.setState({ project: data, active: sourceType, header: header });
+  }
 
   render() {
-    return (
-      <Layout title={'Project and reference'} description={'My project and reference'}>
-        <h1>Project and reference</h1>
+    const { project, header } = this.state;
 
-        <a onClick={() => this.handleChangeProject('externalProjectSource')}>External project</a>
-        <a onClick={() => this.handleChangeProject('myProjectSource')}>My project</a>
+    return (
+      <Layout title={header} description={'Client project'}>
+        <h1>{header}</h1>
+
+        <a
+          className={css.filterLink}
+          onClick={() => this.handleChangeProject('external', 'Client project')}
+        >
+          External project
+        </a>
+        <a className={css.filterLink} onClick={() => this.handleChangeProject('my', 'My project')}>
+          My project
+        </a>
 
         <div className={css.container}>
-          {Object.entries(this.props).map(([key, value]) => (
+          {Object.entries(project).map(([key, value]) => (
             <div key={key} className={css.item}>
               <h3 className={css.header}>{value.title}</h3>
               <p>{value.technology}</p>

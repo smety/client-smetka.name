@@ -1,0 +1,14 @@
+{
+  "0": {
+    "title": "GramofonShop.cz (work in progress, rewrite to Next.js)",
+    "technology": "Nette 2.4, Nette database, Latte, Webpack, Cypress.js, Vue.js, API, Pays gate, XML imports, GA tracking (eCommerce). Credit: Michal Stikar (marketing)",
+   "description": "Sale sound system, gramophon and doplnky, ",
+    "website": "https://www.gramofon-shop.cz/"
+  },
+  "1": {
+    "title": "HarFa - invoice system",
+    "technology": "Online invoice system with API for FIO bank.",
+    "description": "",
+    "website": false
+  }
+}
