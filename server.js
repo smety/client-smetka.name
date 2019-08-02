@@ -7,5 +7,5 @@ const handler = routes.getRequestHandler(app, ({req, res, route, query}) => {
 
 const express = require('express')
 app.prepare().then(() => {
-  express().use(handler).listen(3000)
+  express().use(handler).listen(3001)
 })
