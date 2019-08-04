@@ -1,34 +1,32 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import css from './../assets/project.scss';
-import external from '../static/mock/external';
+import fetch from 'isomorphic-fetch';
+import getMockData from '../functions/mockApi';
 
 export default class Project extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      project: [],
+  static async getInitialProps() {
+    const data = await fetch(getMockData('external'));
+    const project = await data.json();
+    return {
+      project,
       active: 'external',
-      header: 'Client project',
+      head: 'Client project',
     };
   }
 
-  componentDidMount() {
-    this.handleChangeProject('external', 'Client project').then(r => console.log(`Error ${r}`))
-  }
-
   async handleChangeProject(sourceType = 'external', header = 'Client project') {
-    const res = await fetch(`./static/mock/${sourceType}.json`);
+    const res = await fetch(getMockData(sourceType));
     const data = await res.json();
-    this.setState({ project: data, active: sourceType, header: header });
+    this.setState({ project: data, active: sourceType, head: header });
   }
 
   render() {
-    const { project, header } = this.state;
+    const { project, head } = this.props;
 
     return (
-      <Layout title={header} description={'Client project'}>
-        <h1>{header}</h1>
+      <Layout title={head} description={'Client project'}>
+        <h1>{head}</h1>
 
         <a
           className={css.filterLink}
