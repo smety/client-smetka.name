@@ -7,10 +7,14 @@ export default class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      project: external,
+      project: [],
       active: 'external',
       header: 'Client project',
     };
+  }
+
+  componentDidMount() {
+    this.handleChangeProject('external', 'Client project').then(r => console.log(`Error ${r}`))
   }
 
   async handleChangeProject(sourceType = 'external', header = 'Client project') {

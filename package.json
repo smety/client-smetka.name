@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "prettier": "prettier --write \"{{components,epics,lib,mutations,pages,reducers,scripts,test,themes,types},__{tests,mocks,generated}__}/**/*.js\"",
-    "kill": "alias kill3000=\"fuser -k -n tcp 3000\"\n"
+    "kill": "alias kill3000='fuser -k -n tcp 3000'"
   },
   "author": "",
   "license": "ISC",
