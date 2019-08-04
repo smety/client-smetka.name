@@ -9,8 +9,8 @@ export default class Layout extends React.Component {
   render() {
     const {
       children,
-      title = 'Tomas Smetka - frontent developer',
-      description = '...',
+      title = 'Frontend developer',
+      description = 'Vue.js, Webpack, SASS, Node.js, React.js, Vanilla JS',
     } = this.props;
 
     return (
