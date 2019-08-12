@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
-import css from './../assets/project.scss';
+import css from './../assets/css.scss';
 import fetch from 'isomorphic-fetch';
 
 export default class Project extends React.Component {
