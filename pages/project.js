@@ -22,7 +22,7 @@ export default class Project extends React.Component {
             <div key={key} className={css.item}>
               <h3 className={css.header}>{value.title}</h3>
               <p>{value.technology}</p>
-              <a href={value.website} className={css.link} target="_blank">
+              <a href={value.website.toString()} className={css.link} target="_blank">
                 {value.website}
               </a>
             </div>
