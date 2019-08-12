@@ -1,8 +1,17 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import contact from '../static/mock/contact';
+import fetch from 'isomorphic-fetch';
 
 export default class Contact extends React.Component {
+  static async getInitialProps() {
+    const data = await fetch('https://api.myjson.com/bins/uti5v');
+    const contact = await data.json();
+    return {
+      contact,
+    };
+  }
+
   render() {
     return (
       <Layout title={'Contact'} description={'E-mail, LinkedIn and Github profiles.'}>

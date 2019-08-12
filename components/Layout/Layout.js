@@ -19,7 +19,10 @@ export default class Layout extends React.Component {
           <title>{title} - Tomas Smetka</title>
           <meta charSet="utf-8" />
           <meta name="description" content={description} />
-          <meta name="google-site-verification" content="7bz8tJSJ8yYqC9JLbs2HnrPqCfBry1RNEPidWz_zAac" />
+          <meta
+            name="google-site-verification"
+            content="7bz8tJSJ8yYqC9JLbs2HnrPqCfBry1RNEPidWz_zAac"
+          />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
 

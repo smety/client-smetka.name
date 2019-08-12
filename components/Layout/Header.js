@@ -22,6 +22,10 @@ export default class Header extends React.Component {
           <Link route="project">
             <a className={css.link}>Project</a>
           </Link>
+
+          <Link route="reference">
+            <a className={css.link}>Reference</a>
+          </Link>
         </nav>
       </header>
     );

@@ -3,9 +3,9 @@ import Layout from '../components/Layout/Layout';
 import css from './../assets/project.scss';
 import fetch from 'isomorphic-fetch';
 
-export default class Project extends React.Component {
+export default class Reference extends React.Component {
   static async getInitialProps() {
-    const data = await fetch('https://api.myjson.com/bins/1af27n');
+    const data = await fetch('https://api.myjson.com/bins/ioh4z');
     const project = await data.json();
     return { project };
   }
@@ -14,8 +14,8 @@ export default class Project extends React.Component {
     const { project } = this.props;
 
     return (
-      <Layout title={'My project'} description={'My personal project'}>
-        <h1>My project</h1>
+      <Layout title={'Client reference'} description={'Client reference'}>
+        <h1>Client reference</h1>
 
         <div className={css.container}>
           {Object.entries(project).map(([key, value]) => (

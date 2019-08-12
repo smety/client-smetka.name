@@ -4,4 +4,5 @@ routes
   .add('index', '/', 'index')
   .add('contact', '/contact', 'contact')
   .add('skill', '/skill', 'skill')
-  .add('project', '/project', 'project');
+  .add('project', '/project', 'project')
+  .add('reference', '/reference', 'reference');
